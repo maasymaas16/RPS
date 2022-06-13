@@ -42,7 +42,7 @@ function game() {
     let computerScore = 0;
     let playerScore = 0;
 
-    for(let i = 0; i < 5; i++){
+    while(computerScore < 5 && playerScore < 5){
         let winner = playRound();
         if(winner === 'Computer'){
             computerScore++;
