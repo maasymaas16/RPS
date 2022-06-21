@@ -2,6 +2,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 
+
 function compWin() {
     computerScore++;
 }
@@ -23,12 +24,12 @@ function gameReset(){
 }
 
 function isWinner (pScore, cScore) {
-    if (pScore === 5 ){
-        alert("You have won!")
+    if (pScore === 5 || cScore === 5){
+        const result = document.createElement('div');
+        result.classList.add('results');
+        result.textContent = `Game Over! Final Score is ${playerScore} : ${computerScore}`;
+        document.getElementById("container").appendChild(result);
         gameReset();
-    } else if ( cScore === 5){
-        alert("Oh no! The Machine has won...")
-        gameReset()
     }
 }
 
